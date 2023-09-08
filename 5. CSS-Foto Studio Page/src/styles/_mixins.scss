@@ -1,0 +1,232 @@
+@mixin navLinkStyle {
+  padding: 2px 5px;
+  outline: none;
+  color: $primary-font-color;
+  font-family: $secondary-font;
+  font-size: 16px;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+  @media (min-width: 964px) {
+    &:hover {
+      color: $primary-decoration-color;
+    }
+  }
+  &:active {
+    color: $active-focus-decoration-color;
+  }
+  &:focus-visible:not(:hover) {
+    background-color: $secondary-decoration-color;
+  }
+}
+
+@mixin badgeStyle {
+  position: absolute;
+  padding: 6px 14px;
+  background-color: $secondary-background-color;
+  font-family: $primary-font;
+  color: $primary-font-color;
+  font-size: 14px;
+  @media(max-width: 650px) {
+    padding: 4px 7px;
+    font-size: 12px;
+  }
+}
+
+@mixin primaryArticleStyle {
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 22px;
+  outline: none;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out;
+  @media (min-width: 964px) {
+    &:hover {
+      color: $primary-decoration-color;
+    }
+  }
+  &:active {
+    color: $active-focus-decoration-color;
+  }
+  &:focus-visible:not(:hover) {
+    background-color: $article-focus-color;
+  }
+}
+
+@mixin dateStyle {
+  font-family: $primary-font;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+@mixin primaryBtnStyle {
+  padding: 15px 22px;
+  background-color: $primary-decoration-color;
+  color: $primary-font-color;
+  font-size: 16px;
+  font-weight: 700;
+  outline: 3px solid transparent;
+  outline-offset: -3px;
+  transition: background-color .3s ease-in-out, outline-color .3s ease-in-out;
+  @media (min-width: 964px) {
+    &:hover {
+      background-color: $secondary-decoration-color;
+    }
+  }
+  &:active {
+    background-color: $active-focus-decoration-color;
+  }
+  &:focus-visible:not(:hover) {
+    outline-color: $active-focus-decoration-color;
+  }
+  @media(max-width: 450px) {
+    font-size: 14px;
+  }
+}
+
+@mixin secondaryBtnStyle {
+  padding: 15px 22px;
+  border: 3px solid $primary-decoration-color;
+  font-family: $primary-font;
+  color: $primary-font-color;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  transition: background-color .3s ease-in-out, border-color .3s ease-in-out;
+  @media (min-width: 964px) {
+    &:hover {
+      background-color: $primary-decoration-color;
+      border-color: transparent;
+    }
+  }
+  &:active {
+    background-color: $active-focus-decoration-color;
+    border-color: transparent;
+  }
+  &:focus-visible:not(:hover) {
+    background-color: $secondary-decoration-color;
+  }
+}
+
+@mixin socialLinkStyle {
+  outline: none;
+  & svg {
+    fill: $primary-social-link-fill;
+    transition: fill .3s ease-in-out;
+  }
+  @media (min-width: 964px) {
+    &:hover svg {
+      fill: $primary-decoration-color;
+    }
+  }
+  &:active svg {
+    fill: $active-focus-decoration-color;
+  }
+  &:focus-visible:not(:hover) svg {
+    fill: $secondary-decoration-color;
+  }
+}
+
+@mixin searchIconStyle {
+  padding: 3px;
+  outline: none;
+  & svg {
+    fill: $primary-search-link-fill;
+    transition: fill .3s ease-in-out, background-color .3s ease-in-out;
+  }
+  @media (min-width: 964px) {
+    &:hover svg {
+      fill: $primary-decoration-color;
+    }
+  }
+  &:active svg {
+    fill: $active-focus-decoration-color;;
+  }
+  &:focus-visible:not(:hover) {
+    background-color: $secondary-decoration-color;
+  }
+}
+
+@mixin inputAboutUiKit {
+    outline: 1px solid transparent;
+    outline-offset: -1px;
+    transition: color .3s ease-in-out, outline-color .3s ease-in-out;
+  @media (min-width: 964px) {
+    &:hover:not(:focus-visible)::placeholder {
+      color: $primary-decoration-color;
+    }
+  }
+  &:focus {
+    outline-color: $primary-decoration-color;
+  }
+}
+
+@mixin inputSearchUiKit {
+  transition: color .3s ease-in-out, border-color .3s ease-in-out;
+  @media (min-width: 964px) {
+    &:hover:not(:focus-visible) {
+      border-color: $primary-decoration-color;
+    }
+}
+&:focus {
+  border-color: $active-focus-decoration-color;
+  color: $primary-font-color;
+}
+}
+
+@mixin errorValidateLabel {
+  .just-validate-error-label {
+    position: absolute;
+    top: 2px;
+    left: 23px;
+    font-family: $primary-font;
+    font-size: 9px;
+    color: $error-input-color !important;
+  }
+  .just-validate-error-field {
+    outline-color: $error-input-color;
+  }
+}
+
+@mixin closeBtnStyle {
+  svg {
+    fill: $primary-search-close-fill;
+    transition: fill .3s ease-in-out;
+  }
+  &:active svg {
+    fill: $active-focus-decoration-color;;
+  }
+  &:focus-visible svg {
+    fill: $secondary-decoration-color;
+  }
+}
+
+@mixin contactPhoneStyle {
+  display: flex;
+  align-items: center;
+  padding: 2px 5px;
+  outline: none;
+  font-family: $secondary-font;
+  color: $primary-decoration-color;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out, fill 3s ease-in-out;
+  &:active {
+    color: $active-focus-decoration-color;
+    svg {
+      fill: $active-focus-decoration-color;
+    }
+  }
+  &:focus-visible {
+    background-color: $secondary-decoration-color;
+    color: $primary-font-color;
+    svg {
+      fill: $primary-font-color;
+    }
+  }
+  svg {
+    margin-right: 5px;
+    fill: $primary-decoration-color;
+    transition: fill .3s ease-in-out;
+    @media(max-width: 450px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+}

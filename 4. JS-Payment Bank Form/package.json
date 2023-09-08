@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.9.3",
+    "parcel": "^2.9.3"
+  },
+  "dependencies": {
+    "card-validator": "^8.1.1",
+    "email-validator": "^2.0.4",
+    "inputmask": "^5.0.8",
+    "redom": "^3.29.1"
+  }
+}

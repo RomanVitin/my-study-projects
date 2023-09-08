@@ -1,0 +1,72 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'Magallanes';
+    src: local('Magallanes-Regular'),
+      url('../fonts/MagallanesRegular.woff2') format('woff2'),
+      url('../fonts/MagallanesRegular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+@font-face {
+    font-family: 'Magallanes';
+    src: local('Magallanes-Medium'),
+      url('../fonts/MagallanesMedium.woff2') format('woff2'),
+      url('../fonts/MagallanesMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+@font-face {
+    font-family: 'Magallanes';
+    src: local('Magallanes-Bold'),
+      url('../fonts/MagallanesBold.woff2') format('woff2'),
+      url('../fonts/MagallanesBold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Magallanes', sans-serif;
+    background-image: url(../img/pngwing.com.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+  .close-card {
+    background-image: url(../img/card-closed.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .main-card {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    font-size: 50px;
+    transition: background-color .3s linear, color .3s linear, transform .3s linear;
+    cursor: pointer;
+  }
+
+  .timer {
+    font-size: 40px;
+  }
+
+  .success {
+    background-color: aqua;
+    color: green;
+    transform: scale(0.9);
+  }
